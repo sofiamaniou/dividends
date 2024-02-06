@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 
-import { getMockResponse } from './getMockResponse';
+import { getResponse } from './Service.mockdata';
 import { Response } from './Response';
 import { Table } from './Table';
 import { TableProps } from './TableProps';
@@ -21,7 +21,7 @@ export const App: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await getMockResponse(selectedStockId);
+      const response = await getResponse(selectedStockId);
       setResponse(response);
     } catch (error) {
       console.log(error);

@@ -40,7 +40,7 @@ const API_RESPONSE_PAYLOAD: Stock = {
   }
 };
 
-export const getMockResponse = (id: string): Promise<Response> => {
+export const getResponse = (id: string): Promise<Response> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(API_RESPONSE_PAYLOAD[id]);
